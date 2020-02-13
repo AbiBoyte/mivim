@@ -1,0 +1,117 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle
+set nocompatible              " required
+filetype indent plugin on                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'shougo/vimproc.vim'
+Plugin 'xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-sensible'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'lervag/vimtex'
+Plugin 'mbbill/undotree'
+Plugin 'sainnhe/gruvbox-material'
+"Plugin 'neoclide/coc.nvim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set showcmd
+set hidden 
+set hlsearch
+set wildmenu
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Allow backspacing over autoindent, line breaks and start of insert action
+set backspace=indent,eol,start
+
+" When opening a new line and no filetype-specific indenting is enabled,keep
+" the same indent as the line you're currently on. Useful for READMEs, etc.
+set autoindent
+
+" Stop certain movements from always going to the first character of a line.
+" While this behaviour deviates from that of Vi, it does what most users
+" coming from other editors would expect.
+set nostartofline
+
+" Use visual bell instead of beeping when doing something wrong
+set visualbell
+
+" And reset the terminal code for the visual bell. If visualbell is set, and
+" this line is also included, vim will neither flash nor beep. If visualbell
+" is unset, this does nothing.
+set t_vb=
+
+" Set the command window height to 2 lines, to avoid many cases of having to
+" "press <Enter> to continue"
+set cmdheight=2
+
+" Display line numbers on the left
+set number
+
+" Indentation settings for using hard tabs for indent. Display tabs as
+" four characters wide.
+set shiftwidth=4
+set tabstop=4
+
+" Show file stats
+set ruler
+
+" Draws horizontal highlight on the line your cursor is currently in
+set cursorline
+
+" Autocompletes things with tab like filenames in menu
+set wildmenu
+
+" Show the maching parenthesis like character
+set showmatch
+
+" search as characters are entered
+set incsearch      
+
+" highlight matches
+set hlsearch            
+
+" Shows mode insert, visualize, r
+set showmode 
+
+"IDK......
+set textwidth=90
+
+" wrap lines
+set wrap
+
+"Writes matching  
+inoremap { {}<ESC>ha
+inoremap ( ()<ESC>ha
+inoremap [ []<ESC>ha
+inoremap " ""<ESC>ha
+inoremap ' ''<ESC>ha
+
+" tema/colores
+set background=dark
+let g:gruvbox_material_background = 'medium'
+colorscheme gruvbox-material
